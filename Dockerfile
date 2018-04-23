@@ -7,7 +7,7 @@ RUN apt-get update && \
 	python3 \
 	python3-dev \
 	python3-setuptools \
-	python3-pip 
+	python3-pip \ 
 	python-psycopg2 && \
 	pip3 install -U pip setuptools && \
         pip3 install psycopg2 && \

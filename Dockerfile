@@ -1,14 +1,14 @@
-FROM python:3.6
+FROM python:3.6.8-alpine3.8
 MAINTAINER Marcos Pereira marcospereira.mpj@gmail.com
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y \
-	python3 \
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache \
+	gcc \
+	musl-dev \
 	python3-dev \
-	python3-setuptools \
-	python3-pip \ 
-	python-psycopg2 && \
+	postgresql-dev \
+	&& \
 	pip3 install -U pip setuptools && \
         pip3 install psycopg2 && \
         pip3 install gunicorn

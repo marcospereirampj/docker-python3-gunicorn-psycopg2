@@ -1,5 +1,6 @@
 FROM python:3.6.8-alpine3.8
-MAINTAINER Marcos Pereira marcospereira.mpj@gmail.com
+
+LABEL maintainer="marcospereira.mpj@gmail.com"
 
 RUN apk update && \
     apk upgrade && \
